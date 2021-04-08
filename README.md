@@ -17,19 +17,43 @@ Features two panels with a variety of buttons that dynamically alters the surfac
 
 ## Installation
 
-1. Fork and clone 
+1.Fork and clone 
 
-`git clone https://github.com/BrandedNomad/LoginFormA.git`
+`git clone https://github.com/BrandedNomad/VR-dynamic-surfaces.git`
 
-2. Install dependencies
+2.Install dependencies
 
 `npm install`
 
-3. Start development server
+3.(For Widows Users) Manually update the regular expression in node_modules/metro/src/blacklist.js, otherwise you will get an error when you try to start the development server.
+
+from:
+
+`
+var sharedBlacklist = [
+/node_modules[/\\]react[/\\]dist[/\\].*/,
+/website\/node_modules\/.*/,
+/heapCapture\/bundle\.js/,
+/.*\/__tests__\/.*/];
+`
+
+To: 
+
+`
+var sharedBlacklist = [
+  /node_modules[\/\\]react[\/\\]dist[\/\\].*/,
+  /website\/node_modules\/.*/,
+  /heapCapture\/bundle\.js/,
+  /.*\/__tests__\/.*/
+];
+`
+
+
+3.Start development server
 
 `npm start`
 
-4. Navigate to browser, using the link provided in the console
+4.Navigate to browser, using the link provided in the console
 
 
 ## How To Use It
